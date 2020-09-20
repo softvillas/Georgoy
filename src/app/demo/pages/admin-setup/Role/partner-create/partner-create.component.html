@@ -1,0 +1,150 @@
+<div class="row">
+    <div class="col-sm-12">
+        <app-card cardTitle="Create Partner" [options]="false">
+    <h5>Create Partner</h5>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <form action="javascript:">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Partner Name:</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Partner Name">
+                     </div>
+                  </div>  
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Partner Username:</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter User Name">
+                    </div>
+                  </div>  
+           </div>
+           <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Partner Password:</label>
+                <input type="password" class="form-control" id="exampleInputEmail1">
+               </div>
+            </div> 
+     <div class="col-md-6">
+        <div class="form-group">
+          <label>Mobile:</label>
+          <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Mobile">
+         </div>
+      </div>  
+           </div>
+           <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Email:</label>
+              <input type="email" class="form-control" placeholder="Enter Email">
+             </div>
+          </div> 
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Life Insurance</label>
+              <input type="checkbox" class="form-control" id="exampleInputEmail1" >
+             </div>
+          </div> 
+
+           </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Address:</label>
+                  <input type="text" class="form-control" placeholder="Address:">
+                </div>
+              </div> 
+              <div class="col-md-6">
+                  <div class="form-group">
+                    <label>City:</label>
+                    <input type="text" class="form-control" placeholder="Enter City">
+                  </div>
+                </div> 
+      
+          </div>
+     <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Country:</label>
+            <input type="text" class="form-control" placeholder="Enter Country">
+           </div>
+        </div> 
+        <div class="col-md-6">
+            <div class="form-group">
+              <label>Insis Partner Id:</label>
+              <input type="text" class="form-control" placeholder="Enter Partner Id">
+             </div>
+          </div> 
+ 
+     </div>
+     <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Tpa Id:</label>
+            <input type="text" class="form-control" placeholder="TpaId:">
+           </div>
+        </div> 
+        <div class="col-md-6">
+            <div class="form-group">
+              <label>Agency/Broker ID:</label>
+              <input type="text" class="form-control" placeholder="Enter Broker ID">
+             </div>
+          </div> 
+ 
+     </div>
+     <div class="row">
+      
+      <div class="col-md-4">
+        <label class="col-form-label">Partner Category:</label>
+        <select class="form-control" [(ngModel)]="PartnerCategory"  name="PartnerCategory">
+          <option value="0" >Select </option>
+          <option value="2">Broker</option>
+          <option value="3">Agent</option>
+          <option value="2">TPA</option>
+          <option value="3">Head Office</option>
+          <option value="3">B2C</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="col-form-label">Status:</label>
+        <select class="form-control" [(ngModel)]="Status"  name="Status">
+          <option value="1">Active</option>
+          <option value="2">In Active</option>
+          
+        </select>
+      </div> 
+      <div class="col-md-4">
+        <label class="col-form-label">Medical Plan:</label>
+        <select class="form-control" [(ngModel)]="MedicalPlan"  name="MedicalPlan">
+          <option value="1">Select</option>
+          <option value="2">Enhanced IM</option>
+          <option value="2">Enhanced IM AUH</option>
+        </select>
+      </div> 
+   </div>
+   <div class="row">
+  
+      <div class="col-md-4">
+        <label class="col-form-label">Payment Method</label>
+        <select class="form-control" [(ngModel)]="Payment"  name="Payment">
+          <option value="0" >Select </option>
+          <option value="2">Credit Card</option>
+          <option value="3">Cash</option>
+        </select>
+      </div>  
+ </div>
+           
+          
+    <br>
+    <hr>    
+        <button type="submit" class="btn btn-primary">Create</button>
+        <button class="btn btn-defult" (click)="Cancel()">Cancel</button>
+        </form>
+      </div>
+      
+    </div>
+        </app-card>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="row">
+    
+         <!-- [ striped-table ] start -->
+         <div class="col-xl-12">
+          <div class="col-md-3 form-group mb-3" style="margin-left:73%;">
+            <input class="form-control form-control-rounded" type="text" placeholder="Search" name="search" [(ngModel)]="searchText" style="margin-top: -39px;">
+          </div>
+             <div class="table-responsive">
+     
+               <table class="table table-striped">
+                 <thead>
+                  			
+                 <tr>
+                   <th></th>
+                   <th>Policy Number</th>
+                   <th>Quotation Number</th>
+                   <th>Name</th>
+                   <th>Total Premium</th>
+                   <th>Effective Date</th>
+                   <th>Member Type</th>
+                   <th>Created On</th>
+                   <th>Status</th>
+                   <th>Referrer_name</th>
+                   <th>partner_name</th>
+                   <th>Certificate	Bond</th>
+                   <th>CReceipt	Detail</th>
+                 </tr>
+                 </thead>
+                 <tbody *ngFor="let u of PloiciesList | filter:searchText">
+                   <tr>
+                     <td><input type="checkbox" name="checkbox"></td>
+                     <td>{{u.policyNumber}}</td>
+                     <td>{{u.quotationNumber}}</td>
+                     <td>{{u.name}}</td>
+                     <td>{{u.totalPremium}}</td>
+                     <td>{{u.effectiveDate}}</td>
+                     <td>{{u.memberType}}</td>
+                     <td>{{u.createdOn}}</td>
+
+                     <td>{{u.status}}</td>
+                     <td>{{u.referrer_name}}</td>
+                     <td>{{u.partner_name}}</td>
+                     <td>{{u.certificateBond}}</td>
+                     <td>{{u.receiptDetail}}</td>
+                   
+                   </tr>
+                   </tbody>
+                
+               </table>
+             </div>       
+         </div>
+         <!-- [ striped-table ] end -->      
+       </div>
+       
+   

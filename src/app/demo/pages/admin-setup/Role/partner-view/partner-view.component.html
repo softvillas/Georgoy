@@ -1,0 +1,150 @@
+<div class="row">
+    <ng-container *ngIf="show">
+         <div class="col-sm-12">
+           <app-card cardTitle="{{Title}}" [options]="false">
+       <h5>{{Title}}</h5>
+       <hr>
+       <div class="row">
+         <div class="col-md-12">
+           <form action="javascript:">
+               <div class="row">
+                 <div class="col-md-6">
+                   <label class="col-form-label">Role Name</label>
+                   <select class="form-control" [(ngModel)]="roleName"  name="roleName" formControlName="RoleName">
+                     <option value="1">System Admin</option>
+                     <option value="2">Broker</option>
+                     <option value="3">Accounts</option>
+                   </select>
+                 </div>
+          <div class="col-md-6">
+             <div class="form-group">
+               <label>Email ID</label>
+               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="Email" placeholder="Enter Email">
+              </div>
+           </div>  
+              </div>
+              <div class="row">
+               <div class="col-md-6">
+                 <div class="form-group">
+                   <label>First Name</label>
+                   <input type="text" class="form-control" id="exampleInputEmail1" formControlName="FirstName" aria-describedby="emailHelp" placeholder="First Name">
+                  </div>
+               </div> 
+        <div class="col-md-6">
+           <div class="form-group">
+             <label>Last Name</label>
+             <input type="text" class="form-control" id="exampleInputEmail1" formControlName="LastName" aria-describedby="emailHelp" placeholder="Last Name">
+            </div>
+         </div>  
+            </div>
+            <div class="row">
+             <div class="col-md-6">
+               <div class="form-group">
+                 <label>User Name</label>
+                 <input type="text" class="form-control" formControlName="UserName" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User Name">
+                </div>
+             </div> 
+      <div class="col-md-6">
+         <div class="form-group">
+           <label>Contact Number</label>
+           <input type="text" class="form-control" formControlName="ContactNumber" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Contact Number">
+          </div>
+       </div>  
+          </div>
+          <div class="row">
+           <div class="col-md-6">
+             <div class="form-group">
+               <label>No. of Attempts</label>
+               <input type="text" class="form-control" formControlName="NoAttempt" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="No. of Attempts">
+              </div>
+           </div> 
+    <div class="col-md-6">
+       <div class="form-group">
+         <label>Locked</label>
+         <input type="checkbox" class="form-control" id="exampleInputEmail1" formControlName="Locked">
+        </div>
+     </div>  
+        </div>
+        <div class="row">
+         <div class="col-md-6">
+           <label class="col-form-label">Payment Method</label>
+           <select class="form-control" [(ngModel)]="Payment"  name="Payment" formControlName="Payment">
+             <option value="0" >Select </option>
+             <option value="2">Credit Card</option>
+             <option value="3">Cash</option>
+           </select>
+         </div>
+         <div class="col-md-6">
+           <label class="col-form-label">Product</label>
+           <select class="form-control" [(ngModel)]="Product"  name="Product" formControlName="Product">
+             <option value="1">Select</option>
+             <option value="2">Enhanced IM</option>
+             
+           </select>
+         </div> 
+      </div>
+      <div class="row">
+       <div class="col-md-6">
+         <div class="form-group">
+           <label>Password</label>
+           <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="Password">
+          </div>
+       </div> 
+    </div>
+       <br>
+       <hr>    
+           <button type="submit" class="btn btn-primary">{{buttonName}}</button>
+           <button class="btn btn-defult" (click)="Cancel()">Cancel</button>
+           </form>
+         </div>
+         
+       </div>
+           </app-card>
+     </div>
+     </ng-container>
+     
+         <!-- [ striped-table ] start -->
+         <div class="col-xl-12">
+          <div class="col-md-3 form-group mb-3" style="margin-left:73%;">
+            <input class="form-control form-control-rounded" type="text" placeholder="Search" name="search" [(ngModel)]="searchText" style="margin-top: -39px;">
+          </div>
+          <!-- <button class="btn btn-success" (click)="Create()">Create User</button> -->
+             <div class="table-responsive">
+     
+               <table class="table table-striped">
+                 <thead>
+                     
+                 <tr>
+                   <th></th>
+                   <th>Partner Name</th>
+                   <th>Partner User Name</th>
+                   <th>Email</th>
+                   <th>Mobile</th>
+                   <th>Catagory</th>
+                   <th>Status</th>
+                   <!-- <th>Action</th> -->
+                 </tr>
+                 </thead>
+                 <tbody *ngFor="let u of UserList | filter:searchText">
+                  <tr>
+                    <td><input type="checkbox" name="checkbox"></td>
+                     <td>{{u.partnerName}}</td>
+                     <td>{{u.partnerUser}}</td>
+                     <td>{{u.emailId}}</td>
+                     <td>{{u.mobile}}</td>
+                     <td>{{u.catagory}}</td>
+                     <td>{{u.status}}</td>                    
+                     <!-- <td>
+                       <button class="btn btn-success" (click)="Edit()"> Edit</button>
+                       <button class="btn btn-primary" (click)="Edit()" style="margin-left: 20px;"> View</button>
+                   </td> -->
+                   </tr>
+                   </tbody>
+                
+               </table>
+             </div>       
+         </div>
+         <!-- [ striped-table ] end -->      
+       </div>
+       
+   
