@@ -51,7 +51,7 @@ Cancel()
 SaveRecode(UserID) {
   if(UserID)
   {
-    this._qutation.detailUser(this.UserForm.value).then(function (res) {
+    this._qutation.detailDetailQuotation(this.UserForm.value).then(function (res) {
       this.QutationList =res.user;
        if(res.status=="Success")
       {  

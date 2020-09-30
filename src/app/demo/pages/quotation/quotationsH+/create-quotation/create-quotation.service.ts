@@ -60,7 +60,7 @@ Messages:string;
         );
     });
   }
-  detailUser(id){
+  detailDetailQuotation(id){
     const options = { headers: new HttpHeaders({ 'Authorization': 'Bearer ', 'Content-Type': 'application/json' }) };
     return new Promise((resolve, reject) => {
       this.http.get('URL' +id,options)
