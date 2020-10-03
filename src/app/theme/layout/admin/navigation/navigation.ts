@@ -26,23 +26,23 @@ export interface Navigation extends NavigationItem {
 }
 
 const NavigationItems = [
-  {
-    id: 'navigation',
-    title: 'Navigation',
-    type: 'group',
-    icon: 'feather icon-monitor',
-    children: [
-      {
-        id: 'dashboard',
-        title: 'Dashboard',
-        type: 'item',
-        url: '/dashboard/analytics',
-        icon: 'feather icon-home'
-      },
+  // {
+  //   id: 'navigation',
+  //   title: 'Navigation',
+  //   type: 'group',
+  //   icon: 'feather icon-monitor',
+  //   children: [
+  //     {
+  //       id: 'dashboard',
+  //       title: 'Dashboard',
+  //       type: 'item',
+  //       url: '/dashboard/analytics',
+  //       icon: 'feather icon-home'
+  //     },
      
-    ]	
+  //   ]	
     
-  },
+  // },
   // admin setUp 
   {
     id: 'ui-element',
